@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C.A.R. Homepage</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Navigation (loaded from nav.html) -->
+<div id="nav-container"></div>
+<script>
+  fetch('nav.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('nav-container').outerHTML = html;
+    });
+</script>
+
+
+<main>
+<section class="hero" aria-label="Hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-headline">Our mission:<br>Your success</h1>
+          <a href="#" class="hero-cta">Member Benefits</a>
+        </div>
+        <nav class="hero-shortcuts" aria-label="Quick links">
+          <a href="#" class="hero-shortcut" aria-label="Realtor Secure Transactions">
+            Realtor Secure Transactions
+            <span class="hero-shortcut-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#" class="hero-shortcut" aria-label="Advocacy">
+            Advocacy
+            <span class="hero-shortcut-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#" class="hero-shortcut" aria-label="Calendar">
+            Calendar
+            <span class="hero-shortcut-arrow" aria-hidden="true">→</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         SECTION 2: LATEST NEWS
+         SC 1.3.1: semantic article elements
+         SC 2.5.8: all targets min 44px
+         SC 1.4.3: navy on white = 10.8:1 ✓
+    ══════════════════════════════ -->
+    <section class="news" aria-labelledby="news-heading">
+      <div class="news-inner">
+        <h2 class="section-heading" id="news-heading">Latest News</h2>
+        <div class="news-grid" role="list">
+
+          <article class="news-card" role="listitem">
+            <time class="news-card-date" datetime="2026-05-01">May 1, 2026</time>
+            <h3 class="news-card-headline">White House executive orders target housing supply and mortgage credit</h3>
+            <p class="news-card-excerpt">President Trump signed a pair of executive orders aimed at increasing the U.S. housing supply and consumer access to mortgage credit.</p>
+            <a href="#" class="news-card-btn" aria-label="Read: White House executive orders target housing supply and mortgage credit">Read</a>
+          </article>
+
+          <article class="news-card" role="listitem">
+            <time class="news-card-date" datetime="2026-05-10">May 10, 2026</time>
+            <h3 class="news-card-headline">February home sales and price report</h3>
+            <p class="news-card-excerpt">California home sales perked higher in February as slightly more favorable mortgage rates improved affordability and encouraged more buyers to reenter the market.</p>
+            <a href="#" class="news-card-btn" aria-label="Read: February home sales and price report">Read</a>
+          </article>
+
+          <article class="news-card" role="listitem">
+            <time class="news-card-date" datetime="2026-05-20">May 20, 2026</time>
+            <h3 class="news-card-headline">Leading CA gubernatorial candidates share homeownership vision at C.A.R. forum</h3>
+            <p class="news-card-excerpt">The forum brought candidates together to discuss solutions to California's housing affordability crisis and the role of homeownership in strengthening communities.</p>
+            <a href="#" class="news-card-btn" aria-label="Read: Leading CA gubernatorial candidates share homeownership vision at C.A.R. forum">Read</a>
+          </article>
+
+          <article class="news-card" role="listitem">
+            <time class="news-card-date" datetime="2026-05-07">May 7, 2026</time>
+            <h3 class="news-card-headline">AB 1248 passes committee: new CE requirements for property management licensees</h3>
+            <p class="news-card-excerpt">The Assembly Housing Committee advanced AB 1248, which would add six hours of property management coursework to the continuing education requirements for California real estate licensees.</p>
+            <a href="#" class="news-card-btn" aria-label="Read: AB 1248 passes committee: new CE requirements for property management licensees">Read</a>
+          </article>
+
+          <article class="news-card" role="listitem">
+            <time class="news-card-date" datetime="2026-05-14">May 14, 2026</time>
+            <h3 class="news-card-headline">April market data: median home price holds at $879,000 statewide</h3>
+            <p class="news-card-excerpt">C.A.R.'s April housing market report shows the statewide median price held steady while active listings climbed 11% year-over-year, signaling a gradual shift toward a more balanced market.</p>
+            <a href="#" class="news-card-btn" aria-label="Read: April market data: median home price holds at $879,000 statewide">Read</a>
+          </article>
+
+          <article class="news-card" role="listitem">
+            <time class="news-card-date" datetime="2026-05-22">May 22, 2026</time>
+            <h3 class="news-card-headline">C.A.R. EXPO 2026 registration now open — early-bird pricing through June 15</h3>
+            <p class="news-card-excerpt">This year's annual EXPO returns to the Anaheim Convention Center October 8–10. Members can register now at the early-bird rate and browse more than 200 exhibitors and 60 education sessions.</p>
+            <a href="#" class="news-card-btn" aria-label="Read: C.A.R. EXPO 2026 registration now open — early-bird pricing through June 15">Read</a>
+          </article>
+
+        </div>
+        <div class="news-read-all">
+          <a href="#" aria-label="Read all news articles">Read All News <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         SECTION 3: FEATURED CAROUSEL
+         SC 1.3.1: region + heading
+         SC 2.1.1: full keyboard nav
+         SC 2.5.8: CTA min 44px
+         SC 4.1.3: live region for slide changes
+    ══════════════════════════════ -->
+    <section class="featured" aria-labelledby="featured-heading">
+      <div class="featured-inner">
+        <h2 class="section-heading" id="featured-heading">Featured</h2>
+
+        <div aria-live="polite" aria-atomic="true" class="sr-only" id="carousel-announce"></div>
+
+        <div class="featured-main" id="featured-carousel" aria-roledescription="carousel" aria-label="Featured content">
+
+          <!-- Image stage -->
+          <div class="featured-main-image">
+            <div class="featured-slide-img active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="featured-slide-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="featured-slide-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="featured-slide-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="featured-slide-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="featured-slide-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="featured-slide-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <button class="featured-arrow-btn" id="featured-prev" aria-label="Previous featured item">&#8249;</button>
+            <button class="featured-arrow-btn" id="featured-next" aria-label="Next featured item">&#8250;</button>
+          </div>
+
+          <!-- Content stage -->
+          <div class="featured-main-content">
+            <div class="featured-slide-content active" aria-roledescription="slide" aria-label="1 of 7">
+              <p class="featured-main-eyebrow">Event Series</p>
+              <h3 class="featured-main-title">AI Event Series For C.A.R. Members</h3>
+              <p class="featured-main-desc">Learn how artificial intelligence is reshaping real estate. Join us for an exclusive multi-part event series designed for California REALTORS®.</p>
+              <a href="#" class="featured-main-cta">Learn More</a>
+            </div>
+            <div class="featured-slide-content" aria-roledescription="slide" aria-label="2 of 7">
+              <p class="featured-main-eyebrow">Annual Event</p>
+              <h3 class="featured-main-title">5th Annual Fair Housing Day</h3>
+              <p class="featured-main-desc">Celebrate and reaffirm our commitment to fair housing principles. Connect with fellow REALTORS® and advocates across California.</p>
+              <a href="#" class="featured-main-cta">Learn More</a>
+            </div>
+            <div class="featured-slide-content" aria-roledescription="slide" aria-label="3 of 7">
+              <p class="featured-main-eyebrow">Member Benefits</p>
+              <h3 class="featured-main-title">152 Benefits. All In One Place.</h3>
+              <p class="featured-main-desc">Discover the full breadth of your C.A.R. membership. From legal resources to marketing tools, your benefits are all here waiting for you.</p>
+              <a href="#" class="featured-main-cta">Explore Benefits</a>
+            </div>
+            <div class="featured-slide-content" aria-roledescription="slide" aria-label="4 of 7">
+              <p class="featured-main-eyebrow">Education</p>
+              <h3 class="featured-main-title">Renew Your License With C.A.R. Courses</h3>
+              <p class="featured-main-desc">Complete your continuing education requirements with courses designed specifically for California real estate professionals.</p>
+              <a href="#" class="featured-main-cta">Browse Courses</a>
+            </div>
+            <div class="featured-slide-content" aria-roledescription="slide" aria-label="5 of 7">
+              <p class="featured-main-eyebrow">Market Data</p>
+              <h3 class="featured-main-title">Q1 2026 Housing Market Report</h3>
+              <p class="featured-main-desc">Get the latest data on California home sales, prices, and affordability trends. Essential reading for every REALTOR® in the state.</p>
+              <a href="#" class="featured-main-cta">Read Report</a>
+            </div>
+            <div class="featured-slide-content" aria-roledescription="slide" aria-label="6 of 7">
+              <p class="featured-main-eyebrow">Tools</p>
+              <h3 class="featured-main-title">zipForm® Edition: What's New in 2026</h3>
+              <p class="featured-main-desc">Explore the latest updates to zipForm® Edition, with faster document prep, improved e-signature workflows, and new compliance tools.</p>
+              <a href="#" class="featured-main-cta">See What's New</a>
+            </div>
+            <div class="featured-slide-content" aria-roledescription="slide" aria-label="7 of 7">
+              <p class="featured-main-eyebrow">Advocacy</p>
+              <h3 class="featured-main-title">Your Voice in Sacramento: 2026 Legislative Update</h3>
+              <p class="featured-main-desc">C.A.R. is fighting for policies that protect property rights and expand homeownership. See what we've been working on this session.</p>
+              <a href="#" class="featured-main-cta">Read Update</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Thumbnail strip -->
+        <div class="featured-thumbs-viewport">
+        <div class="featured-thumbs" id="featured-thumbs-track" role="tablist" aria-label="Featured items">
+          <button class="featured-thumb active" role="tab" aria-selected="true" aria-controls="featured-carousel" aria-label="AI Event Series For C.A.R. Members, slide 1 of 7" data-index="0">
+            <div class="featured-thumb-bg"></div>
+            <span class="featured-thumb-label">AI Event Series For C.A.R. Members</span>
+          </button>
+          <button class="featured-thumb" role="tab" aria-selected="false" aria-controls="featured-carousel" aria-label="5th Annual Fair Housing Day, slide 2 of 7" data-index="1">
+            <div class="featured-thumb-bg"></div>
+            <span class="featured-thumb-label">5th Annual Fair Housing Day</span>
+          </button>
+          <button class="featured-thumb" role="tab" aria-selected="false" aria-controls="featured-carousel" aria-label="152 Benefits. All In One Place., slide 3 of 7" data-index="2">
+            <div class="featured-thumb-bg"></div>
+            <span class="featured-thumb-label">152 Benefits. All In One Place.</span>
+          </button>
+          <button class="featured-thumb" role="tab" aria-selected="false" aria-controls="featured-carousel" aria-label="Renew Your License With C.A.R. Courses, slide 4 of 7" data-index="3">
+            <div class="featured-thumb-bg"></div>
+            <span class="featured-thumb-label">Renew Your License With C.A.R. Courses</span>
+          </button>
+          <button class="featured-thumb" role="tab" aria-selected="false" aria-controls="featured-carousel" aria-label="Q1 2026 Housing Market Report, slide 5 of 7" data-index="4">
+            <div class="featured-thumb-bg"></div>
+            <span class="featured-thumb-label">Q1 2026 Housing Market Report</span>
+          </button>
+          <button class="featured-thumb" role="tab" aria-selected="false" aria-controls="featured-carousel" aria-label="zipForm® Edition: What's New in 2026, slide 6 of 7" data-index="5">
+            <div class="featured-thumb-bg"></div>
+            <span class="featured-thumb-label">zipForm® Edition: What's New in 2026</span>
+          </button>
+          <button class="featured-thumb" role="tab" aria-selected="false" aria-controls="featured-carousel" aria-label="Your Voice in Sacramento: 2026 Legislative Update, slide 7 of 7" data-index="6">
+            <div class="featured-thumb-bg"></div>
+            <span class="featured-thumb-label">Your Voice in Sacramento: 2026 Legislative Update</span>
+          </button>
+        </div><!-- /featured-thumbs -->
+        </div><!-- /featured-thumbs-viewport -->
+
+        <!-- Mobile dot indicators (hidden on desktop via CSS) -->
+        <div class="featured-dots-mobile" role="tablist" aria-label="Featured items" id="featured-dots-mobile">
+          <button class="featured-dot-m active" role="tab" aria-selected="true"  aria-label="Slide 1 of 7" data-dot="0"></button>
+          <button class="featured-dot-m"        role="tab" aria-selected="false" aria-label="Slide 2 of 7" data-dot="1"></button>
+          <button class="featured-dot-m"        role="tab" aria-selected="false" aria-label="Slide 3 of 7" data-dot="2"></button>
+          <button class="featured-dot-m"        role="tab" aria-selected="false" aria-label="Slide 4 of 7" data-dot="3"></button>
+          <button class="featured-dot-m"        role="tab" aria-selected="false" aria-label="Slide 5 of 7" data-dot="4"></button>
+          <button class="featured-dot-m"        role="tab" aria-selected="false" aria-label="Slide 6 of 7" data-dot="5"></button>
+          <button class="featured-dot-m"        role="tab" aria-selected="false" aria-label="Slide 7 of 7" data-dot="6"></button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         SECTION 4: TOP RESOURCES
+         SC 1.3.1: role="tablist/tab/tabpanel"
+         SC 2.1.1: arrow key tab navigation
+         SC 2.5.8: tabs min 44px height
+         SC 1.4.3: contrast on all text
+    ══════════════════════════════ -->
+    <section class="resources" aria-labelledby="resources-heading">
+      <div class="resources-inner">
+        <div class="resources-header">
+          <h2 class="section-heading" id="resources-heading">Featured Resources</h2>
+          <p class="resources-subtitle">Lorem ipsum dolor sit amet consectetur. Donec aliquam consequat pharetra nullam aliquam lobortis pharetra.</p>
+        </div>
+
+        <!-- Tab bar -->
+        <div class="resources-tabs" role="tablist" aria-label="Resource categories">
+          <button class="resources-tab active" role="tab" aria-selected="true"  aria-controls="panel-forms"    id="tab-forms"    >Forms &amp; Transactions</button>
+          <button class="resources-tab"        role="tab" aria-selected="false" aria-controls="panel-legal"    id="tab-legal"    >Legal &amp; Ethics</button>
+          <button class="resources-tab"        role="tab" aria-selected="false" aria-controls="panel-advocacy" id="tab-advocacy" >Advocacy</button>
+          <button class="resources-tab"        role="tab" aria-selected="false" aria-controls="panel-reports"  id="tab-reports"  >Latest Reports</button>
+        </div>
+
+        <!-- Tab panels -->
+        <div class="resources-panel active" id="panel-forms" role="tabpanel" aria-labelledby="tab-forms">
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">Forms Tutor</h3>
+              <p class="resource-card-desc">Free advice to help you understand the form you're using with Forms Tutor®.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about Forms Tutor">Learn More</a>
+            </div>
+          </article>
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">ZipForm Support</h3>
+              <p class="resource-card-desc">Step-by-step guidance to complete your documents accurately and efficiently.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about ZipForm Support">Learn More</a>
+            </div>
+          </article>
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">Lone Wolf Transactions (ZipForm Edition) Certification</h3>
+              <p class="resource-card-desc">Learn how you can build your expertise with this vital software.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about Lone Wolf Transactions (ZipForm Edition) Certification">Learn More</a>
+            </div>
+          </article>
+        </div>
+        <div class="resources-panel" id="panel-legal" role="tabpanel" aria-labelledby="tab-legal">
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">Legal Q&As</h3>
+              <p class="resource-card-desc">Get answers to the most common legal questions facing California REALTORS® today.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about Legal Q&As">Learn More</a>
+            </div>
+          </article>
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">New Laws 2026</h3>
+              <p class="resource-card-desc">Stay current with every new law affecting real estate practice in California this year.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about New Laws 2026">Learn More</a>
+            </div>
+          </article>
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">Quick Guides</h3>
+              <p class="resource-card-desc">Concise reference guides covering disclosures, contracts, and compliance essentials.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about Quick Guides">Learn More</a>
+            </div>
+          </article>
+        </div>
+        <div class="resources-panel" id="panel-advocacy" role="tabpanel" aria-labelledby="tab-advocacy">
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">REALTOR® Action Fund</h3>
+              <p class="resource-card-desc">Support the political action committee that fights for homeowners and property rights.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about REALTOR® Action Fund">Learn More</a>
+            </div>
+          </article>
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">State Legislative Update</h3>
+              <p class="resource-card-desc">Track the bills C.A.R. is sponsoring and opposing in the 2026 legislative session.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about State Legislative Update">Learn More</a>
+            </div>
+          </article>
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">Get Involved</h3>
+              <p class="resource-card-desc">Find out how you can make your voice heard at the local, state, and federal level.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about Get Involved">Learn More</a>
+            </div>
+          </article>
+        </div>
+        <div class="resources-panel" id="panel-reports" role="tabpanel" aria-labelledby="tab-reports">
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">Q1 2026 Housing Market Report</h3>
+              <p class="resource-card-desc">The latest data on California home sales, prices, and affordability trends.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about Q1 2026 Housing Market Report">Learn More</a>
+            </div>
+          </article>
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">Housing Affordability Index</h3>
+              <p class="resource-card-desc">Monthly analysis of what percentage of households can afford a median-priced home.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about Housing Affordability Index">Learn More</a>
+            </div>
+          </article>
+          <article class="resource-card">
+            <div class="resource-card-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            <div class="resource-card-body">
+              <h3 class="resource-card-title">County-Level Market Data</h3>
+              <p class="resource-card-desc">Drill into sales and price trends for every county across California.</p>
+              <a href="#" class="resource-card-btn" aria-label="Learn more about County-Level Market Data">Learn More</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         SECTION 5: UPCOMING EVENTS
+         SC 1.3.1: semantic list structure
+         SC 2.5.8: buttons min 44px
+         SC 1.4.3: contrast on meta text
+    ══════════════════════════════ -->
+    <section class="events" aria-labelledby="events-heading">
+      <div class="events-inner">
+
+        <!-- Left: heading + description + calendar link -->
+        <div class="events-left">
+          <h2 class="section-heading" id="events-heading">Upcoming Events</h2>
+          <p class="events-desc">Lorem ipsum dolor sit amet consectetur. Donec aliquam consequat pharetra nullam aliquam lobortis pharetra.</p>
+          <a href="#" class="events-calendar-link" aria-label="Go to Events Calendar">Go to Events Calendar</a>
+        </div>
+
+        <!-- Right: event list -->
+        <div class="events-list" role="list" aria-label="Upcoming events">
+          <div class="event-item" role="listitem">
+            <div class="event-body">
+              <div class="event-meta">
+                <span>Apr 08</span>
+                <span class="event-meta-dot" aria-hidden="true"></span>
+                <span>9:45am – 1pm</span>
+                <span class="event-meta-dot" aria-hidden="true"></span>
+                <span class="event-location">
+                  <span aria-hidden="true">📍</span>
+                  Online
+                </span>
+              </div>
+              <h3 class="event-title">STEPS Towards Homeownership</h3>
+            </div>
+            <a href="#" class="event-add-btn" aria-label="Add to calendar: STEPS Towards Homeownership">Add to Calendar</a>
+          </div>
+          <div class="event-item" role="listitem">
+            <div class="event-body">
+              <div class="event-meta">
+                <span>Apr 08</span>
+                <span class="event-meta-dot" aria-hidden="true"></span>
+                <span>9:45am – 1pm</span>
+                <span class="event-meta-dot" aria-hidden="true"></span>
+                <span class="event-location">
+                  <span aria-hidden="true">📍</span>
+                  Online
+                </span>
+              </div>
+              <h3 class="event-title">The C.A.R. Dispute Resolution Center and Best Practices for Real Estate Mediations</h3>
+            </div>
+            <a href="#" class="event-add-btn" aria-label="Add to calendar: The C.A.R. Dispute Resolution Center and Best Practices for Real Estate Mediations">Add to Calendar</a>
+          </div>
+          <div class="event-item" role="listitem">
+            <div class="event-body">
+              <div class="event-meta">
+                <span>Apr 08</span>
+                <span class="event-meta-dot" aria-hidden="true"></span>
+                <span>9:45am – 1pm</span>
+                <span class="event-meta-dot" aria-hidden="true"></span>
+                <span class="event-location">
+                  <span aria-hidden="true">📍</span>
+                  Online
+                </span>
+              </div>
+              <h3 class="event-title">Boost Efficiency and Productivity in zipForm &amp; Transact</h3>
+            </div>
+            <a href="#" class="event-add-btn" aria-label="Add to calendar: Boost Efficiency and Productivity in zipForm &amp; Transact">Add to Calendar</a>
+          </div>
+          <div class="event-item" role="listitem">
+            <div class="event-body">
+              <div class="event-meta">
+                <span>Apr 08</span>
+                <span class="event-meta-dot" aria-hidden="true"></span>
+                <span>9:45am – 1pm</span>
+                <span class="event-meta-dot" aria-hidden="true"></span>
+                <span class="event-location">
+                  <span aria-hidden="true">📍</span>
+                  Online
+                </span>
+              </div>
+              <h3 class="event-title">The Deductions You're Missing: Last-Minute Tax Strategies for Real Estate Pros</h3>
+            </div>
+            <a href="#" class="event-add-btn" aria-label="Add to calendar: The Deductions You're Missing: Last-Minute Tax Strategies for Real Estate Pros">Add to Calendar</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer (loaded from footer.html) -->
+    <div id="footer-container"></div>
+    <script>
+      fetch('footer.html')
+        .then(r => r.text())
+        .then(html => {
+          document.getElementById('footer-container').outerHTML = html;
+        });
+    </script>
+</main>
+
+<script src="js/nav.js"></script>
+<script src="js/account-panel.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Scroll-triggered reveal animations
+(function() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const targets = document.querySelectorAll(
+    '.news-inner, .featured-inner, .resources-inner, .events-inner'
+  );
+  targets.forEach(el => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+  );
+  targets.forEach(el => observer.observe(el));
+})();
+</script>
+
+</body>
+</html>
